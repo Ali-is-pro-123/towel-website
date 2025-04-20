@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Us - Plume Linen</title>
+  <meta name="description" content="Learn more about Plume Linen, our mission, vision, and commitment to quality bath towels." />
+  <meta name="keywords" content="about Plume Linen, company info, mission, vision, bath towels" />
+  <meta name="author" content="Plume Linen" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+    }
+    body {
+      background-color: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background-color: #004d40;
+      color: #fff;
+      padding: 1rem 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    header h1 {
+      font-size: 1.8rem;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 2rem;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    nav a:hover,
+    nav a:focus {
+      color: #ff7043;
+      outline: none;
+    }
+    main {
+      max-width: 900px;
+      margin: 3rem auto;
+      background: #fff;
+      padding: 2rem 3rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #004d40;
+      margin-bottom: 1rem;
+    }
+    p {
+      margin-bottom: 1.5rem;
+      font-size: 1.1rem;
+      color: #555;
+    }
+    footer {
+      background-color: #004d40;
+      color: #fff;
+      text-align: center;
+      padding: 2rem 5%;
+      margin-top: 4rem;
+    }
+    footer p {
+      margin-bottom: 0.5rem;
+    }
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav {
+        margin-top: 0.5rem;
+      }
+      nav a {
+        margin-left: 0;
+        margin-right: 1rem;
+      }
+      main {
+        margin: 2rem 1rem;
+        padding: 1.5rem 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="towel.html" class="logo-link" style="display:flex; align-items:center; text-decoration:none; color:#fff;">
+      <img src="logo.png" alt="Plume Linen Logo" style="height:40px; margin-right:10px;" />
+      <h1 style="margin:0; font-size:1.8rem;">Plume Linen</h1>
+    </a>
+    <nav>
+      <a href="towel.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="about1.html">About</a>
+      <a href="contact1.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>About Plume Linen</h2>
+    <p>At Plume Linen, we are dedicated to providing premium quality bath towels that combine softness, absorbency, and style. Our commitment to excellence ensures that every towel enhances your bath experience.</p>
+    <h2>Our Mission</h2>
+    <p>To deliver luxurious, eco-friendly, and durable bath linens that bring comfort and elegance to your home.</p>
+    <h2>Our Vision</h2>
+    <p>To be the leading brand in premium bath linens, recognized for quality, sustainability, and customer satisfaction.</p>
+    <h2>Contact Us</h2>
+    <p>If you have any questions or feedback, please reach out to us at <a href="mailto:hello@plumelinen.com">hello@plumelinen.com</a> or call us at +1 (555) 123-4567.</p>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Plume Linen. All rights reserved.</p>
+    <p>Contact us: hello@plumelinen.com | +1 (555) 123-4567</p>
+  </footer>
+  <script>
+    const navToggle = document.createElement('div');
+    navToggle.className = 'nav-toggle';
+    navToggle.setAttribute('aria-label', 'toggle navigation');
+    navToggle.setAttribute('role', 'button');
+    navToggle.setAttribute('tabindex', '0');
+    navToggle.innerHTML = '<span></span><span></span><span></span>';
+    document.querySelector('header').insertBefore(navToggle, document.querySelector('nav'));
+
+    const nav = document.querySelector('nav');
+
+    navToggle.addEventListener('click', () => {
+      nav.classList.toggle('active');
+    });
+
+    navToggle.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        nav.classList.toggle('active');
+      }
+    });
+  </script>
+</body>
+</html>

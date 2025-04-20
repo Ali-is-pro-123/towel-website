@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bath Towel Collection</title>
+  <meta name="description" content="Discover premium bath towels at Plume Linen. Soft, absorbent, and stylish towels for your perfect bath experience." />
+  <meta name="keywords" content="bath towels, premium towels, absorbent towels, stylish towels, Plume Linen" />
+  <meta name="author" content="Plume Linen" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+    }
+    body {
+      background-color: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background-color: #004d40;
+      color: #fff;
+      padding: 1rem 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    header h1 {
+      font-size: 1.8rem;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 2rem;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    nav a:hover,
+    nav a:focus {
+      color: #ff7043;
+      outline: none;
+    }
+    .nav-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      width: 30px;
+      height: 25px;
+      justify-content: space-between;
+    }
+    .nav-toggle span {
+      height: 3px;
+      background: #fff;
+      border-radius: 2px;
+      transition: background-color 0.3s ease;
+    }
+    .nav-toggle:focus {
+      outline: 2px solid #ff7043;
+      outline-offset: 2px;
+    }
+    @media (max-width: 768px) {
+      .nav-toggle {
+        display: flex;
+      }
+      nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #004d40;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 1rem 5%;
+      }
+      nav.active {
+        display: flex;
+      }
+      nav a {
+        margin: 1rem 0;
+        font-size: 1.2rem;
+      }
+    }
+    .hero {
+      background: url("WhatsApp Image 2025-04-17 at 17.59.50_84fe835f.jpg") no-repeat center center/cover;
+      height: 70vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      text-align: center;
+      padding: 0 2rem;
+      position: relative;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 77, 64, 0.7);
+      z-index: 0;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 600px;
+    }
+    .hero-content h2 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    .hero-content p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    .btn {
+      background-color: #ff7043;
+      color: #fff;
+      padding: 0.8rem 2rem;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+    .btn:hover,
+    .btn:focus {
+      background-color: #e64a19;
+      outline: none;
+    }
+    .featured, .customer-favorites, .new-arrivals {
+      padding: 4rem 5%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .featured h3, .customer-favorites h3, .new-arrivals h3 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 3rem;
+      color: #004d40;
+    }
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+    .product-card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+    .product-card:hover,
+    .product-card:focus-within {
+      transform: translateY(-10px);
+      outline: none;
+    }
+    .product-img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .product-info {
+      padding: 1rem 1.5rem 2rem;
+    }
+    .product-info h4 {
+      margin-bottom: 0.5rem;
+      color: #00796b;
+    }
+    .product-info p {
+      color: #555;
+      margin-bottom: 1rem;
+    }
+    .product-price {
+      font-weight: bold;
+      color: #ff7043;
+      font-size: 1.2rem;
+    }
+    footer {
+      background-color: #004d40;
+      color: #fff;
+      text-align: center;
+      padding: 2rem 5%;
+      margin-top: 4rem;
+    }
+    footer p {
+      margin-bottom: 0.5rem;
+    }
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav {
+        margin-top: 0.5rem;
+      }
+      nav a {
+        margin-left: 0;
+        margin-right: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="towel.html" class="logo-link" style="display:flex; align-items:center; text-decoration:none; color:#fff;">
+      <img src="logo.png" alt="Plume Linen Logo" style="height:40px; margin-right:10px;" />
+      <h1 style="margin:0; font-size:1.8rem;">Plume Linen</h1>
+    </a>
+    <nav>
+      <a href="towel.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="about1.html">About</a>
+      <a href="contact1.html">Contact</a>
+    </nav>
+    <div class="nav-toggle" aria-label="toggle navigation" role="button" tabindex="0">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Discover Our Premium Bath Towels</h2>
+      <p>Soft, absorbent, and stylish towels for your perfect bath experience.</p>
+      <a href="#featured" class="btn">Shop Now</a>
+    </div>
+  </section>
+  <script>
+    const navToggle = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('nav');
+
+    navToggle.addEventListener('click', () => {
+      nav.classList.toggle('active');
+    });
+
+    // Accessibility: toggle nav on Enter or Space key
+    navToggle.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        nav.classList.toggle('active');
+      }
+    });
+  </script>
+
+  <section class="featured" id="featured">
+    <h3>Featured Towels</h3>
+    <div class="products">
+      <div class="product-card">
+        <img src="towel/xyz1.webp" alt="White Crinkled Border Hand Towel" class="product-img" />
+        <div class="product-info">
+          <h4>White Crinkled Border Hand Towel</h4>
+          <p></p>
+          <p class="product-price">$54.20</p>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="towel/xyz2.webp" alt="White Dash Striped Hand Towel" class="product-img" />
+        <div class="product-info">
+          <h4>White Dash Striped Hand Towel</h4>
+          <p></p>
+          <p class="product-price">$74.50</p>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="towel/xyz3.webp" alt="White Lattice Triple Stripe Hand Towel" class="product-img" />
+        <div class="product-info">
+          <h4>White Lattice Triple Stripe Hand Towel</h4>
+          <p></p>
+          <p class="product-price">$65.40</p>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="towel/xyz4.webp" alt="Blue Soft Cotton Towel" class="product-img" />
+        <div class="product-info">
+          <h4>Blue Soft Cotton Towel</h4>
+          <p></p>
+          <p class="product-price">$58.00</p>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="towel/xyz5.webp" alt="Green Bamboo Fiber Towel" class="product-img" />
+        <div class="product-info">
+          <h4>Green Bamboo Fiber Towel</h4>
+          <p></p>
+          <p class="product-price">$62.30</p>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="towel/xyz6.webp" alt="Pink Floral Pattern Towel" class="product-img" />
+        <div class="product-info">
+          <h4>Pink Floral Pattern Towel</h4>
+          <p></p>
+          <p class="product-price">$70.10</p>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="towel/xyz7.webp" alt="Yellow Striped Beach Towel" class="product-img" />
+        <div class="product-info">
+          <h4>Yellow Striped Beach Towel</h4>
+          <p></p>
+          <p class="product-price">$55.90</p>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="towel/xyz8.webp" alt="Gray Plush Bath Towel" class="product-img" />
+        <div class="product-info">
+          <h4>Gray Plush Bath Towel</h4>
+          <p></p>
+          <p class="product-price">$68.75</p>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="towel/xyz9.webp" alt="Orange Cotton Towel" class="product-img" />
+        <div class="product-info">
+          <h4>Orange Cotton Towel</h4>
+          <p></p>
+          <p class="product-price">$60.00</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="customer-favorites">
+    <h3>Customer Favorites</h3>
+    <div class="products">
+      <div class="product-card">
+        <img src="towel/xyz27.jpeg" alt="Soft White Towel" class="product-img" />
+        <div class="product-info">
+          <h4>Soft White Towel</h4>
+          <p></p>
+          <p class="product-price">$52.00</p>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="towel/xyz10.jpg" alt="Luxury Egyptian Cotton Towel" class="product-img" />
+        <div class="product-info">
+          <h4>Luxury Egyptian Cotton Towel</h4>
+          <p></p>
+          <p class="product-price">$85.00</p>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="towel/xyz11.webp" alt="Eco-friendly Hemp Towel" class="product-img" />
+        <div class="product-info">
+          <h4>Eco-friendly Hemp Towel</h4>
+          <p></p>
+          <p class="product-price">$67.50</p>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="towel/xyz12.jpg" alt="Classic Blue Towel" class="product-img" />
+        <div class="product-info">
+          <h4>Classic Blue Towel</h4>
+          <p></p>
+          <p class="product-price">$59.99</p>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="towel/xyz13.jpg" alt="Soft Pink Towel" class="product-img" />
+        <div class="product-info">
+          <h4>Soft Pink Towel</h4>
+          <p></p>
+          <p class="product-price">$54.99</p>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="towel/xyz14.jpg" alt="Striped Gray Towel" class="product-img" />
+        <div class="product-info">
+          <h4>Striped Gray Towel</h4>
+          <p></p>
+          <p class="product-price">$57.00</p>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="towel/xyz15.jpg" alt="Turquoise Beach Towel" class="product-img" />
+        <div class="product-info">
+          <h4>Turquoise Beach Towel</h4>
+          <p></p>
+          <p class="product-price">$63.00</p>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="towel/xyz16.jpeg" alt="Coral Cotton Towel" class="product-img" />
+        <div class="product-info">
+          <h4>Coral Cotton Towel</h4>
+          <p></p>
+          <p class="product-price">$58.50</p>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="towel/xyz17.jpeg" alt="Lavender Scented Towel" class="product-img" />
+        <div class="product-info">
+          <h4>Lavender Scented Towel</h4>
+          <p></p>
+          <p class="product-price">$61.00</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="new-arrivals">
+    <h3>New Arrivals</h3>
+    <div class="products">
+      <div class="product-card">
+        <img src="towel/xyz18.jpeg" alt="Soft Blue Towel" class="product-img" />
+        <div class="product-info">
+          <h4>Soft Blue Towel</h4>
+          <p></p>
+          <p class="product-price">$55.00</p>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="towel/xyz19.jpeg" alt="Organic Cotton Towel" class="product-img" />
+        <div class="product-info">
+          <h4>Organic Cotton Towel</h4>
+          <p></p>
+          <p class="product-price">$72.00</p>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="towel/xyz20.jpeg" alt="Striped Beach Towel" class="product-img" />
+        <div class="product-info">
+          <h4>Striped Beach Towel</h4>
+          <p></p>
+          <p class="product-price">$60.00</p>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="towel/xyz21.jpeg" alt="Soft Green Towel" class="product-img" />
+        <div class="product-info">
+          <h4>Soft Green Towel</h4>
+          <p></p>
+          <p class="product-price">$58.00</p>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="towel/xyz22.jpeg" alt="Classic White Towel" class="product-img" />
+        <div class="product-info">
+          <h4>Classic White Towel</h4>
+          <p></p>
+          <p class="product-price">$53.00</p>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="towel/xyz23.jpeg" alt="Blue Striped Towel" class="product-img" />
+        <div class="product-info">
+          <h4>Blue Striped Towel</h4>
+          <p></p>
+          <p class="product-price">$59.00</p>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="towel/xyz24.jpeg" alt="Pink Cotton Towel" class="product-img" />
+        <div class="product-info">
+          <h4>Pink Cotton Towel</h4>
+          <p></p>
+          <p class="product-price">$57.50</p>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="towel/xyz25.jpeg" alt="Soft Yellow Towel" class="product-img" />
+        <div class="product-info">
+          <h4>Soft Yellow Towel</h4>
+          <p></p>
+          <p class="product-price">$56.00</p>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="towel/xyz26.jpeg" alt="Coral Beach Towel" class="product-img" />
+        <div class="product-info">
+          <h4>Coral Beach Towel</h4>
+          <p></p>
+          <p class="product-price">$61.50</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Plume Linen. All rights reserved.</p>
+    <p>Contact us: hello@plumelinen.com | +1 (555) 123-4567</p>
+  </footer>
+</body>
+</html>

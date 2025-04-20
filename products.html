@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Product Details - Plume Linen</title>
+  <meta name="description" content="Detailed view of our premium bath towels at Plume Linen." />
+  <meta name="keywords" content="bath towels, premium towels, product details, Plume Linen" />
+  <meta name="author" content="Plume Linen" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+    }
+    body {
+      background-color: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background-color: #004d40;
+      color: #fff;
+      padding: 1rem 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .logo-link {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: #fff;
+    }
+    .logo-link img {
+      height: 40px;
+      margin-right: 10px;
+    }
+    .logo-link h1 {
+      margin: 0;
+      font-size: 1.8rem;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 2rem;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    nav a:hover,
+    nav a:focus {
+      color: #ff7043;
+      outline: none;
+    }
+    main {
+      max-width: 900px;
+      margin: 3rem auto;
+      background: #fff;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+    .products {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      padding: 0 5%;
+    }
+    .product-card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+    .product-card:hover,
+    .product-card:focus-within {
+      transform: translateY(-10px);
+      outline: none;
+    }
+    .product-img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .product-info {
+      padding: 1rem 1.5rem 2rem;
+    }
+    .product-info h4 {
+      margin-bottom: 0.5rem;
+      color: #00796b;
+    }
+    .product-info p {
+      color: #555;
+      margin-bottom: 1rem;
+    }
+    .product-price {
+      font-weight: bold;
+      color: #ff7043;
+      font-size: 1.2rem;
+    }
+    footer {
+      background-color:  #004d40;
+      color: #fff;
+      text-align: center;
+      padding: 2rem 5%;
+      margin-top: 4rem;
+    }
+    footer p {
+      margin-bottom: 0.5rem;
+    }
+    @media (max-width: 768px) {
+      main {
+        flex-direction: column;
+        max-width: 90%;
+      }
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav {
+        margin-top: 0.5rem;
+      }
+      nav a {
+        margin-left: 0;
+        margin-right: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="towel.html" class="logo-link">
+      <img src="logo.png" alt="Plume Linen Logo" />
+      <h1>Plume Linen</h1>
+    </a>
+    <nav>
+      <a href="towel.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="about1.html">About</a>
+      <a href="contact1.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2 style="text-align:center; color:#004d40; margin-bottom: 2rem;">Our Products</h2>
+    <div class="products">
+      <div class="product-card">
+        <img src="towel/xyz1.webp" alt="White Crinkled Border Hand Towel" class="product-img" />
+        <div class="product-info">
+          <h4>White Crinkled Border Hand Towel</h4>
+          <p>Soft and absorbent hand towel with elegant crinkled border.</p>
+          <p class="product-price">$54.20</p>
+          <a href="#" class="btn" style="background-color: #ff7043; color: #fff; padding: 0.8rem 2rem; border: none; border-radius: 5px; font-weight: bold; cursor: pointer; text-decoration: none; display: inline-block; text-align: center; transition: background-color 0.3s ease;">Add to Cart</a>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="towel/xyz2.webp" alt="White Dash Striped Hand Towel" class="product-img" />
+        <div class="product-info">
+          <h4>White Dash Striped Hand Towel</h4>
+          <p>Classic hand towel with stylish dash stripes.</p>
+          <p class="product-price">$74.50</p>
+          <a href="#" class="btn" style="background-color: #ff7043; color: #fff; padding: 0.8rem 2rem; border: none; border-radius: 5px; font-weight: bold; cursor: pointer; text-decoration: none; display: inline-block; text-align: center; transition: background-color 0.3s ease;">Add to Cart</a>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="towel/xyz3.webp" alt="White Lattice Triple Stripe Hand Towel" class="product-img" />
+        <div class="product-info">
+          <h4>White Lattice Triple Stripe Hand Towel</h4>
+          <p>Elegant hand towel with lattice triple stripe design.</p>
+          <p class="product-price">$65.40</p>
+          <a href="#" class="btn" style="background-color: #ff7043; color: #fff; padding: 0.8rem 2rem; border: none; border-radius: 5px; font-weight: bold; cursor: pointer; text-decoration: none; display: inline-block; text-align: center; transition: background-color 0.3s ease;">Add to Cart</a>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="towel/xyz4.webp" alt="Blue Soft Cotton Towel" class="product-img" />
+        <div class="product-info">
+          <h4>Blue Soft Cotton Towel</h4>
+          <p>Soft cotton towel in calming blue shade.</p>
+          <p class="product-price">$58.00</p>
+          <a href="#" class="btn" style="background-color: #ff7043; color: #fff; padding: 0.8rem 2rem; border: none; border-radius: 5px; font-weight: bold; cursor: pointer; text-decoration: none; display: inline-block; text-align: center; transition: background-color 0.3s ease;">Add to Cart</a>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="towel/xyz5.webp" alt="Green Bamboo Fiber Towel" class="product-img" />
+        <div class="product-info">
+          <h4>Green Bamboo Fiber Towel</h4>
+          <p>Eco-friendly bamboo fiber towel in green.</p>
+          <p class="product-price">$62.30</p>
+          <a href="#" class="btn" style="background-color: #ff7043; color: #fff; padding: 0.8rem 2rem; border: none; border-radius: 5px; font-weight: bold; cursor: pointer; text-decoration: none; display: inline-block; text-align: center; transition: background-color 0.3s ease;">Add to Cart</a>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="towel/xyz6.webp" alt="Pink Floral Pattern Towel" class="product-img" />
+        <div class="product-info">
+          <h4>Pink Floral Pattern Towel</h4>
+          <p>Soft towel with delicate pink floral pattern.</p>
+          <p class="product-price">$70.10</p>
+          <a href="#" class="btn" style="background-color: #ff7043; color: #fff; padding: 0.8rem 2rem; border: none; border-radius: 5px; font-weight: bold; cursor: pointer; text-decoration: none; display: inline-block; text-align: center; transition: background-color 0.3s ease;">Add to Cart</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Plume Linen. All rights reserved.</p>
+    <p>Contact us: hello@plumelinen.com | +1 (555) 123-4567</p>
+  </footer>
+</body>
+</html>
